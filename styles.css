@@ -1,0 +1,91 @@
+/* Estilos base del proyecto Adopta una Mascota */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #333;
+  background-color: #fafafa;
+  line-height: 1.6;
+}
+
+/* Encabezado */
+.encabezado {
+  background-color: #4caf50;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  margin-left: 1rem;
+}
+
+/* Hero */
+.hero {
+  background-color: #e8f5e9;
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.boton {
+  background-color: #2e7d32;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  cursor: pointer;
+}
+
+/* Secciones */
+.seccion {
+  padding: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.seccion h2 {
+  color: #2e7d32;
+  margin-bottom: 1rem;
+}
+
+/* Tarjetas de mascotas */
+.tarjetas {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.tarjeta {
+  border: 1px solid #ccc;
+  background: white;
+  padding: 1rem;
+  width: 200px;
+  text-align: center;
+}
+
+/* Formulario */
+.formulario label {
+  display: block;
+  margin-top: 0.5rem;
+}
+
+.formulario input,
+.formulario textarea {
+  width: 100%;
+  padding: 0.4rem;
+}
+
+/* Pie de página */
+.pie {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
