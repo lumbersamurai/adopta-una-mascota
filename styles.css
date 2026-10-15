@@ -51,7 +51,6 @@ body {
   border-radius: 5px;
   transform: translateY(-2px);
 }
-
 /* Huellitas del menú */
 .menu a::before {
   content: "";
@@ -111,6 +110,13 @@ body {
   padding: 1rem;
   width: 200px;
   text-align: center;
+}
+
+.tarjeta img {
+  width: 100%;
+  aspect-ratio: 5 / 4;
+  object-fit: cover;
+  display: block;
 }
 
 /* Formulario */
