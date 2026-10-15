@@ -12,21 +12,67 @@ body {
   line-height: 1.6;
 }
 
+
 /* Encabezado */
 .encabezado {
   background-color: #4caf50;
   color: white;
-  padding: 1rem 2rem;
+  padding: 1.2rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+}
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
 }
 
 .menu a {
   color: white;
   text-decoration: none;
-  margin-left: 1rem;
+  padding: 0.5rem 0.8rem;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
+
+.menu a:hover {
+  background-color: #388e3c;
+  border-radius: 5px;
+  transform: translateY(-2px);
+}
+
+
+/* Huellitas del menú */
+
+/* Huellitas del menú */
+.menu a::before {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin-right: 7px;
+  vertical-align: -3px;
+
+  background-image: url("./huella.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: none;
+
+  transform: rotate(-45deg);
+}
+
 
 /* Hero */
 .hero {
@@ -95,4 +141,26 @@ body {
   color: white;
   text-align: center;
   padding: 1rem;
+}
+
+
+/* Botón especial de Adóptame */
+.menu a[href="#adopta"] {
+  background-color: white;
+  color: #2e7d32;
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+/* Huellitas verdes */
+.menu a[href="#adopta"]::before {
+  filter: grayscale(1) brightness(0) saturate(100%)
+          invert(36%) sepia(27%) saturate(1227%)
+          hue-rotate(73deg);
+}
+
+/* Efecto al pasar el cursor */
+.menu a[href="#adopta"]:hover {
+  background-color: #e8f5e9;
+  transform: translateY(-2px);
 }
