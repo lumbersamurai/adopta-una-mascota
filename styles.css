@@ -12,44 +12,29 @@ body {
   line-height: 1.6;
 }
 
-
 /* Encabezado */
 .encabezado {
   background-color: #4caf50;
   color: white;
-  padding: 1.2rem 2rem;
+  padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 1rem;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
-}
-
-.logo {
-  font-size: 1.6rem;
-  font-weight: bold;
-}
-
-.menu {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  flex-wrap: wrap;
 }
 
 .menu a {
   color: white;
   text-decoration: none;
-  padding: 0.5rem 0.8rem;
-  border-radius: 6px;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-left: 1rem;
 }
 
-.menu a:hover {
-  background-color: #388e3c;
-  border-radius: 5px;
-  transform: translateY(-2px);
+/* Hero */
+.hero {
+  background:
+    linear-gradient(to bottom, transparent 60%, #fafafa 100%),
+    linear-gradient(135deg, #e8f5e9, #c8e6c9);
+  text-align: center;
+  padding: 5rem 2rem;
 }
 /* Huellitas del menú */
 .menu a::before {
@@ -69,12 +54,22 @@ body {
   transform: rotate(-45deg);
 }
 
+/* Título principal del Hero */
+.hero h2 {
+  font-size: 2.5rem;
+  color: #2e7d32;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  letter-spacing: 0.5px;
+}
 
-/* Hero */
-.hero {
-  background-color: #e8f5e9;
-  text-align: center;
-  padding: 3rem 1rem;
+/* Descripción del Hero */
+.hero p {
+  font-size: 1.2rem;
+  color: #4b6350;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  line-height: 1.7;
 }
 
 .boton {
@@ -84,6 +79,29 @@ body {
   padding: 0.6rem 1.2rem;
   cursor: pointer;
 }
+
+
+/* Botón principal del Hero */
+.hero .boton {
+  background-color: #2e7d32;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 0.9rem 2rem;
+  border-radius: 25px;
+  box-shadow: 0 4px 10px rgba(46, 125, 50, 0.2);
+  transition: all 0.3s ease;
+  display: inline-block;
+  text-decoration: none;
+}
+
+/* Efecto al pasar el cursor */
+.hero .boton:hover {
+  background-color: #1b5e20;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(46, 125, 50, 0.3);
+}
+
 
 /* Secciones */
 .seccion {
@@ -95,6 +113,56 @@ body {
 .seccion h2 {
   color: #2e7d32;
   margin-bottom: 1rem;
+}
+
+/* Sección Sobre nosotros */
+#nosotros {
+  background-color: white;
+  border-radius: 15px;
+  padding: 2.5rem;
+  margin: 2rem auto;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* Valores del refugio */
+.valores {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  list-style: none;
+  margin-top: 1.5rem;
+  justify-content: center;
+}
+
+.valores li {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+  padding: 0.6rem 1.2rem;
+  border-radius: 20px;
+  font-weight: 500;
+  border: 1px solid #c8e6c9;
+}
+
+
+/* Huellitas de los valores */
+.valores li::before {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin-right: 7px;
+  vertical-align: -3px;
+
+  background-image: url("./huella.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  filter: brightness(0) saturate(100%)
+          invert(36%) sepia(27%) saturate(1227%)
+          hue-rotate(73deg);
+
+  transform: rotate(-45deg);
 }
 
 /* Tarjetas de mascotas */
@@ -139,6 +207,33 @@ body {
   padding: 1rem;
 }
 
+/* Diseño Responsivo (Celulares y pantallas pequeñas) */
+@media (max-width: 600px) {
+  .encabezado {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .menu a {
+    display: block;
+    margin: 5px 0;
+  }
+
+  .tarjetas {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tarjeta {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  body {
+    padding: 10px;
+  }
+}
 
 /* Botón especial de Adóptame */
 .menu a[href="#adopta"] {
