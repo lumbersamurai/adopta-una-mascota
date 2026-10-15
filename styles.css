@@ -143,6 +143,33 @@ body {
   padding: 1rem;
 }
 
+/* Diseño Responsivo (Celulares y pantallas pequeñas) */
+@media (max-width: 600px) {
+  .encabezado {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .menu a {
+    display: block;
+    margin: 5px 0;
+  }
+
+  .tarjetas {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tarjeta {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  body {
+    padding: 10px;
+  }
+}
 
 /* Botón especial de Adóptame */
 .menu a[href="#adopta"] {
