@@ -188,27 +188,89 @@ body {
 }
 
 /* Formulario */
+.formulario {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
 .formulario label {
   display: block;
-  margin-top: 0.5rem;
+  margin-top: 1rem;
+  margin-bottom: 0.4rem;
+  font-weight: bold;
 }
 
 .formulario input,
 .formulario textarea {
   width: 100%;
-  padding: 0.4rem;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.formulario input:focus,
+.formulario textarea:focus {
+  outline: none;
+  border-color: #2e7d32;
+  box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.15);
+}
+
+.formulario textarea {
+  resize: vertical;
+}
+
+.formulario .boton {
+  margin-top: 1rem;
+  padding: 0.8rem 1.5rem;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.formulario .boton:hover {
+  background-color: #1b5e20;
 }
 
 /* Pie de página */
 .pie {
-  background-color: #333;
+  background-color: #263238;
   color: white;
   text-align: center;
-  padding: 1rem;
+  padding: 2rem 1rem;
+}
+
+.pie p {
+  margin-bottom: 1rem;
+}
+
+.redes-sociales {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.pie a {
+  color: #a5d6a7;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.pie a:hover {
+  color: white;
+  text-decoration: underline;
 }
 
 /* Diseño Responsivo (Celulares y pantallas pequeñas) */
 @media (max-width: 600px) {
+  .formulario {
+    padding: 1rem;
+  }
+
   .encabezado {
     flex-direction: column;
     align-items: center;
