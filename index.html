@@ -4,13 +4,32 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Adopta una Mascota</title>
+  <meta name="description" content="Refugio sin fines de lucro. Conoce a los perros y gatos que esperan una familia y visítanos de lunes a sábado.">
+
+  <!-- Tipografías: títulos (Fraunces), subtítulos y botones (Bricolage Grotesque), textos (Nunito Sans) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
+  <a class="salto" href="#contenido">Saltar al contenido</a>
+
   <!-- Encabezado: logo y menú de navegación -->
   <header class="encabezado">
-    <h1 class="logo">🐾 Adopta una Mascota</h1>
-    <nav class="menu">
+    <a class="logo" href="#inicio">
+      <span class="huella logo-huella" aria-hidden="true"></span>
+      <span>Adopta una Mascota</span>
+    </a>
+
+    <button class="menu-boton" type="button" aria-expanded="false" aria-controls="menu">
+      <span class="menu-barras" aria-hidden="true"></span>
+      <span>Menú</span>
+    </button>
+
+    <nav class="menu" id="menu" aria-label="Principal">
       <a href="#inicio">Inicio</a>
       <a href="#nosotros">Nosotros</a>
       <a href="#adopta">Adóptame</a>
@@ -19,116 +38,226 @@
     </nav>
   </header>
 
-  <main>
+  <main id="contenido">
     <!-- Sección principal (hero) -->
     <section id="inicio" class="hero">
-      <h2>Dales una segunda oportunidad</h2>
-      <p>Encuentra a tu nuevo mejor amigo en nuestro refugio.</p>
-      <a href="#adopta" class="boton">Quiero adoptar</a>
+      <div class="contenedor hero-interior">
+        <div class="hero-texto">
+          <h1>
+            <span class="linea"><span style="--i:0">Dales una</span></span>
+            <span class="linea"><span style="--i:1">segunda</span></span>
+            <span class="linea"><span style="--i:2">oportunidad</span></span>
+          </h1>
+          <p class="lead hero-lead">Encuentra a tu nuevo mejor amigo en nuestro refugio. Ven a conocerlos, sin cita y con las puertas abiertas.</p>
+          <div class="hero-acciones">
+            <a href="#adopta" class="boton">Quiero adoptar</a>
+            <a href="#visita" class="boton boton-borde">Cómo llegar</a>
+          </div>
+        </div>
+
+        <div class="hero-fotos">
+          <figure style="--i:0">
+            <img src="Imagenes/Captura de pantalla 2026-10-12 185246.png" alt="Firulais, disponible para adopción">
+          </figure>
+          <figure style="--i:1">
+            <img src="Imagenes/WhatsApp Image 2026-10-12 at 6.54.43 PM.jpeg" alt="Michi, disponible para adopción">
+          </figure>
+          <figure style="--i:2">
+            <img src="Imagenes/WhatsApp Image 2026-10-12 at 6.55.18 PM.jpeg" alt="Rocky, disponible para adopción">
+          </figure>
+        </div>
+      </div>
+
+      <!-- Rastro de huellas que aparece al cargar la página -->
+      <div class="rastro" aria-hidden="true">
+        <span class="huella" style="--x:3%;  --y:1.6rem; --r:78deg;  --i:0"></span>
+        <span class="huella" style="--x:14%; --y:2.8rem; --r:98deg;  --i:1"></span>
+        <span class="huella" style="--x:25%; --y:1.4rem; --r:80deg;  --i:2"></span>
+        <span class="huella" style="--x:36%; --y:2.6rem; --r:96deg;  --i:3"></span>
+        <span class="huella" style="--x:47%; --y:1.2rem; --r:82deg;  --i:4"></span>
+        <span class="huella" style="--x:58%; --y:2.4rem; --r:98deg;  --i:5"></span>
+        <span class="huella" style="--x:69%; --y:1.4rem; --r:80deg;  --i:6"></span>
+        <span class="huella" style="--x:80%; --y:2.6rem; --r:96deg;  --i:7"></span>
+        <span class="huella" style="--x:91%; --y:1.5rem; --r:84deg;  --i:8"></span>
+      </div>
+    </section>
+
+    <!-- Sección sobre nosotros -->
+    <section id="nosotros" class="seccion">
+      <div class="contenedor dos-columnas">
+        <div class="revelar">
+          <h2>Sobre nosotros</h2>
+          <p class="lead">Somos un refugio sin fines de lucro dedicado a rescatar, cuidar y encontrarle un hogar a perros y gatos abandonados.</p>
+        </div>
+
+        <ul class="valores">
+          <li class="revelar" style="--i:0">
+            <span class="huella" aria-hidden="true"></span>
+            <div><strong>Responsabilidad</strong><span>Adoptar es un compromiso para toda la vida del animal.</span></div>
+          </li>
+          <li class="revelar" style="--i:1">
+            <span class="huella" aria-hidden="true"></span>
+            <div><strong>Cuidado</strong><span>Los atendemos con paciencia hasta que encuentran familia.</span></div>
+          </li>
+          <li class="revelar" style="--i:2">
+            <span class="huella" aria-hidden="true"></span>
+            <div><strong>Amor</strong><span>Todos merecen cariño, sin importar su historia.</span></div>
+          </li>
+          <li class="revelar" style="--i:3">
+            <span class="huella" aria-hidden="true"></span>
+            <div><strong>Compasión</strong><span>Entendemos de dónde vienen y cómo se sienten.</span></div>
+          </li>
+          <li class="revelar" style="--i:4">
+            <span class="huella" aria-hidden="true"></span>
+            <div><strong>Respeto</strong><span>Cada uno tiene su ritmo y sus propias necesidades.</span></div>
+          </li>
+        </ul>
+      </div>
     </section>
 
     <!-- Sección adopta: tarjetas de mascotas -->
-    <section id="adopta" class="seccion">
-      <h2>Adóptame</h2>
-      <div class="tarjetas">
-        <article class="tarjeta">
-           <img src="Imagenes/Captura de pantalla 2026-10-12 185246.png" alt="Un perro">
-          <h3>Firulais</h3>
-          <p>Firulais, 2 años. Juguetón y cariñoso.</p>
-        </article>
-        <article class="tarjeta">
-          <img src="Imagenes/WhatsApp Image 2026-10-12 at 6.54.43 PM.jpeg" alt="Un perro">
-          <h3>Michi</h3>
-          <p>Sam, 9 años. Tanquila y cariñosa</p>
-        </article>
-        <article class="tarjeta">
-           <img src="Imagenes/WhatsApp Image 2026-10-12 at 6.55.18 PM.jpeg" alt="Un gato">
-          <h3>Rocky</h3>
-          <p>Vaca, 3 años. Le gusta la zanahoria.</p>
-        </article>
+    <section id="adopta" class="seccion seccion-blanca">
+      <div class="contenedor">
+        <h2 class="revelar">Adóptame</h2>
+        <p class="lead revelar">Ellos esperan una familia. Filtra por especie o busca por nombre.</p>
+
+        <div class="controles">
+          <div class="chips" role="group" aria-label="Filtrar por especie">
+            <button class="chip" type="button" data-filtro="todos" aria-pressed="true">Todos</button>
+            <button class="chip" type="button" data-filtro="perro" aria-pressed="false">Perros</button>
+            <button class="chip" type="button" data-filtro="gato" aria-pressed="false">Gatos</button>
+          </div>
+          <div class="buscador">
+            <label class="solo-lectores" for="buscar">Buscar por nombre</label>
+            <input type="search" id="buscar" placeholder="Buscar por nombre" autocomplete="off">
+          </div>
+        </div>
+
+        <div class="tarjetas">
+          <article class="tarjeta revelar" style="--i:0" data-especie="perro">
+            <div class="tarjeta-foto">
+              <img src="Imagenes/Captura de pantalla 2026-10-12 185246.png" alt="Foto de Firulais" loading="lazy">
+            </div>
+            <div class="tarjeta-cuerpo">
+              <h3>Firulais</h3>
+              <p class="etiqueta">Perro, 2 años</p>
+              <p>Juguetón y cariñoso.</p>
+              <a class="enlace" href="#contacto" data-mascota="Firulais">Quiero conocerlo</a>
+            </div>
+          </article>
+
+          <article class="tarjeta revelar" style="--i:1" data-especie="perro">
+            <div class="tarjeta-foto">
+              <img src="Imagenes/WhatsApp Image 2026-10-12 at 6.54.43 PM.jpeg" alt="Foto de Michi" loading="lazy">
+            </div>
+            <div class="tarjeta-cuerpo">
+              <h3>Michi</h3>
+              <p class="etiqueta">Perro, 9 años</p>
+              <p>Tranquila y cariñosa.</p>
+              <a class="enlace" href="#contacto" data-mascota="Michi">Quiero conocerla</a>
+            </div>
+          </article>
+
+          <article class="tarjeta revelar" style="--i:2" data-especie="gato">
+            <div class="tarjeta-foto">
+              <img src="Imagenes/WhatsApp Image 2026-10-12 at 6.55.18 PM.jpeg" alt="Foto de Rocky" loading="lazy">
+            </div>
+            <div class="tarjeta-cuerpo">
+              <h3>Rocky</h3>
+              <p class="etiqueta">Gato, 3 años</p>
+              <p>Le gusta la zanahoria.</p>
+              <a class="enlace" href="#contacto" data-mascota="Rocky">Quiero conocerlo</a>
+            </div>
+          </article>
+        </div>
+
+        <p class="sin-resultados" hidden>No encontramos mascotas con ese nombre. Prueba con otra búsqueda o vuelve a mostrar todos.</p>
+      </div>
+    </section>
+
+    <!-- Pasos para adoptar (es una secuencia real, por eso va numerada) -->
+    <section id="pasos" class="seccion seccion-oscura">
+      <div class="contenedor">
+        <h2 class="revelar">Pasos para adoptar</h2>
+        <p class="lead revelar">Tres pasos y estás listo para conocer a tu nuevo amigo.</p>
+
+        <ol class="pasos">
+          <li class="revelar" style="--i:0">
+            <h3>Elige</h3>
+            <p>Revisa a nuestros peluditos y anota con quién te gustaría convivir.</p>
+          </li>
+          <li class="revelar" style="--i:1">
+            <h3>Visítanos</h3>
+            <p>Ven de lunes a sábado, de 10:00 a 17:00 hrs. No necesitas cita.</p>
+          </li>
+          <li class="revelar" style="--i:2">
+            <h3>Pregunta lo que quieras</h3>
+            <p>Si tienes dudas antes de venir, escríbenos desde el formulario de contacto.</p>
+          </li>
+        </ol>
       </div>
     </section>
 
     <!-- Sección visítanos -->
-<section id="visita" class="seccion">
-    <section id="visita" class="seccion visita">
-       <h2>Visítanos</h2>
-      <p class="visita-intro">Pasa a conocer a nuestros lindos peluditos, ¡ELLOS TE ESPERAN CON AMOR Y CON GANAS DE TENER UNA FAMILIA! 🐾</p>
+    <section id="visita" class="seccion">
+      <div class="contenedor dos-columnas dos-columnas-mapa">
+        <div class="revelar">
+          <h2>Visítanos</h2>
+          <p class="lead">Pasa a conocer a nuestros lindos peluditos. ¡Ellos te esperan con amor y con ganas de tener una familia!</p>
 
-      <div class="visita-contenido">
-        <div class="visita-tarjeta">
-          <ul class="visita-datos">
-            <li>
-              <span class="visita-icono" aria-hidden="true">🏡</span>
-              <div>
-                <strong>Dirección</strong>
-               <p>Fes Cuautitlan Campo 4, Acceso 2 .</p>
-             </div>
-            </li>
-            <li>
-              <span class="visita-icono" aria-hidden="true">🕙</span>
-              <div>
-                <strong>Horario</strong>
-                <p>Lunes a sábado, 10:00 a 17:00 hrs.</p>
-              </div>
-            </li>
-            <li>
-              <span class="visita-icono" aria-hidden="true">🐶</span>
-              <div>             
-                   <strong>Ven a conocerlos</strong>
-                <p>No ocupas una cita o un día apartado, ¡Para adotar un peludito siempre estan las puertas abiertas!</p>
-              </div>
-            </li>
-          </ul>
+          <dl class="datos">
+            <div>
+              <dt>Dirección</dt>
+              <dd>FES Cuautitlán, Campo 4, Acceso 2.</dd>
+            </div>
+            <div>
+              <dt>Horario</dt>
+              <dd>Lunes a sábado, de 10:00 a 17:00 hrs.</dd>
+            </div>
+            <div>
+              <dt>Ven a conocerlos</dt>
+              <dd>No necesitas cita ni un día apartado. Para adoptar a un peludito, las puertas siempre están abiertas.</dd>
+            </div>
+          </dl>
 
-          <a class="boton-visita"
-             href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3756.543174167278!2d-99.1899766257992!3d19.68948573242898!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1f55f752d8035%3A0x18d253a85bb8bf58!2sFESC%20Campo%204%20Acceso%202!5e0!3m2!1ses!2smx!4v1792035558167!5m2!1ses!2smx"
-
-             target="_blank" rel="noopener">
-            <span aria-hidden="true">🧭</span> Cómo llegar para adoptar a una de nuestras mascotas
-          </a>
+          <a class="boton"
+             href="https://www.google.com/maps/search/?api=1&query=19.689486,-99.189977"
+             target="_blank" rel="noopener">Cómo llegar</a>
         </div>
 
-        <div class="visita-mapa">
+        <div class="mapa revelar" style="--i:1">
           <iframe
             title="Mapa de ubicación del refugio"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3756.543174167278!2d-99.1899766257992!3d19.68948573242898!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1f55f752d8035%3A0x18d253a85bb8bf58!2sFESC%20Campo%204%20Acceso%202!5e0!3m2!1ses!2smx!4v1792035558167!5m2!1ses!2smx+refer+123&output=embed"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3756.543174167278!2d-99.1899766257992!3d19.68948573242898!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1f55f752d8035%3A0x18d253a85bb8bf58!2sFESC%20Campo%204%20Acceso%202!5e0!3m2!1ses!2smx!4v1792035558167!5m2!1ses!2smx"
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
-           allowfullscreen></iframe>
+            allowfullscreen></iframe>
         </div>
       </div>
-     </section>
-
-
-
-
-
-
-
-
-
-
+    </section>
 
     <!-- Sección contacto -->
-    <section id="contacto" class="seccion">
-      <h2>Contáctanos</h2>
-      <form class="formulario">
-        <label for="nombre">Nombre</label>
-        <input type="text" id="nombre" name="nombre"
-               placeholder="Ingresa tu nombre" required>
+    <section id="contacto" class="seccion seccion-suave">
+      <div class="contenedor dos-columnas">
+        <div class="revelar">
+          <h2>Contáctanos</h2>
+          <p class="lead">¿Tienes dudas sobre alguna mascota o sobre cómo adoptar? Escríbenos y con gusto te ayudamos.</p>
+        </div>
 
-        <label for="correo">Correo</label>
-        <input type="email" id="correo" name="correo"
-               placeholder="Ingresa tu correo" required>
+        <form class="formulario revelar" style="--i:1">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre" autocomplete="name" required>
 
-        <label for="mensaje">Mensaje</label>
-        <textarea id="mensaje" name="mensaje"
-                  placeholder="Escribe tu mensaje" rows="5"
-                  required></textarea>
+          <label for="correo">Correo</label>
+          <input type="email" id="correo" name="correo" placeholder="Ingresa tu correo" autocomplete="email" required>
 
-        <button type="submit" class="boton">Enviar mensaje</button>
-      </form>
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje" rows="5" required></textarea>
+
+          <button type="submit" class="boton">Enviar mensaje</button>
+          <p class="estado" role="status" aria-live="polite"></p>
+        </form>
+      </div>
     </section>
     
     <!-- Sección sobre nosotros -->
@@ -148,13 +277,17 @@
   </main>
 
   <footer class="pie">
-    <p>© 2026 Adopta una Mascota — Proyecto escolar</p>
-    <div class="redes-sociales">
-      <a href="https://www.facebook.com/" target="_blank">Facebook</a>
-      <a href="https://www.instagram.com/" target="_blank">Instagram</a>
-      <a href="https://x.com/" target="_blank">X</a>
+    <div class="contenedor pie-interior">
+      <p>© 2026 Adopta una Mascota. Proyecto escolar.</p>
+      <div class="redes-sociales">
+        <a href="https://www.facebook.com/" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://x.com/" target="_blank" rel="noopener">X</a>
+        <a href="#contacto">Contáctanos</a>
+      </div>
     </div>
-    <a href="#contacto">Contáctanos</a>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
