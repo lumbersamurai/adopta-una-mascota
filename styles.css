@@ -36,6 +36,23 @@ body {
   text-align: center;
   padding: 5rem 2rem;
 }
+/* Huellitas del menú */
+.menu a::before {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin-right: 7px;
+  vertical-align: -3px;
+
+  background-image: url("./huella.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: none;
+
+  transform: rotate(-45deg);
+}
 
 /* Título principal del Hero */
 .hero h2 {
