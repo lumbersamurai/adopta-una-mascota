@@ -163,6 +163,13 @@ body {
   text-align: center;
 }
 
+.tarjeta img {
+  width: 100%;
+  aspect-ratio: 5 / 4;
+  object-fit: cover;
+  display: block;
+}
+
 /* Formulario */
 .formulario label {
   display: block;
@@ -181,4 +188,53 @@ body {
   color: white;
   text-align: center;
   padding: 1rem;
+}
+
+/* Diseño Responsivo (Celulares y pantallas pequeñas) */
+@media (max-width: 600px) {
+  .encabezado {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .menu a {
+    display: block;
+    margin: 5px 0;
+  }
+
+  .tarjetas {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tarjeta {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  body {
+    padding: 10px;
+  }
+}
+
+/* Botón especial de Adóptame */
+.menu a[href="#adopta"] {
+  background-color: white;
+  color: #2e7d32;
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+/* Huellitas verdes */
+.menu a[href="#adopta"]::before {
+  filter: grayscale(1) brightness(0) saturate(100%)
+          invert(36%) sepia(27%) saturate(1227%)
+          hue-rotate(73deg);
+}
+
+/* Efecto al pasar el cursor */
+.menu a[href="#adopta"]:hover {
+  background-color: #e8f5e9;
+  transform: translateY(-2px);
 }
