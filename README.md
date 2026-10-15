@@ -19,7 +19,7 @@ Sitio web de una sola página para un refugio de animales sin fines de lucro. Pr
 - Sección principal (hero) con un llamado a la acción.
 - Tarjetas de mascotas con foto, nombre y descripción breve.
 - Datos de ubicación y horario de atención.
-- Formulario de contacto con campos de nombre, correo y mensaje.
+- Formulario de contacto con campos de nombre, correo y mensaje (solo visual).
 - Etiquetas semánticas (`header`, `nav`, `main`, `section`, `article`, `footer`) y etiquetas `label` asociadas a cada campo del formulario.
 - Texto alternativo (`alt`) en todas las imágenes.
 - Idioma del documento declarado como español (`lang="es"`).
@@ -31,7 +31,7 @@ Sitio web de una sola página para un refugio de animales sin fines de lucro. Pr
 | HTML5 | Estructura y contenido de la página |
 | CSS3 | Estilos, diseño con Flexbox y paleta de colores |
 
-No se utiliza JavaScript, frameworks ni librerías externas.
+No se utiliza JavaScript, frameworks ni librerías locales. Las imágenes de ejemplo se cargan desde `via.placeholder.com`.
 
 ## Estructura del proyecto
 
@@ -47,14 +47,15 @@ No se utiliza JavaScript, frameworks ni librerías externas.
 No requiere instalación. Hay dos opciones:
 
 1. **Abrir directamente:** haz doble clic en `index.html` o arrástralo a tu navegador.
-2. **Servidor local (opcional):** desde la carpeta del proyecto, ejecuta uno de estos comandos y visita `http://localhost:8000`.
+2. **Servidor local (opcional):** desde la carpeta del proyecto, ejecuta uno de estos comandos.
 
 ```bash
 # Con Python 3
 python -m http.server 8000
+# Visita http://localhost:8000
 
 # O con Node.js
-npx serve
+npx serve .
 ```
 
 ## Secciones del sitio
@@ -62,7 +63,7 @@ npx serve
 | Sección | Identificador | Descripción |
 |---------|---------------|-------------|
 | Encabezado | `.encabezado` | Logo y menú de navegación |
-| Inicio | `#inicio` | Mensaje de bienvenida y botón "Quiero adoptar" |
+| Inicio | `#inicio` | Mensaje de bienvenida y botón "Quiero adoptar" (sin acción configurada) |
 | Sobre nosotros | `#nosotros` | Misión del refugio y lista de valores: responsabilidad, cuidado y amor |
 | Adóptame | `#adopta` | Tarjetas de Firulais (perro), Michi (gato) y Rocky (conejo) |
 | Visítanos | `#visita` | Dirección y horario (lunes a sábado, 10:00 a 17:00 hrs) |
@@ -106,9 +107,9 @@ Actualiza la dirección y el horario en la sección `#visita`, y los textos de l
 
 ## Limitaciones conocidas
 
-- El formulario de contacto no tiene `action` ni JavaScript, por lo que no envía información a ningún lado.
-- El botón "Quiero adoptar" todavía no lleva a ninguna parte.
-- Las imágenes de las mascotas usan `via.placeholder.com`, un servicio externo que puede no cargar. Conviene reemplazarlas por fotos reales guardadas en el proyecto.
+- El formulario de contacto no tiene `action` ni JavaScript, por lo que no envía información.
+- El botón "Quiero adoptar" es visual y todavía no lleva a ninguna sección.
+- Las imágenes de las mascotas usan `via.placeholder.com`, un servicio externo; pueden no cargar sin conexión.
 - Los enlaces de redes sociales del pie de página son solo texto, sin hipervínculos.
 - El diseño no incluye `media queries`; en pantallas muy pequeñas el encabezado puede verse apretado.
 
