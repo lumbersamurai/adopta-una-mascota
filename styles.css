@@ -70,6 +70,13 @@ body {
   text-align: center;
 }
 
+.tarjeta img {
+  width: 100%;
+  aspect-ratio: 5 / 4;
+  object-fit: cover;
+  display: block;
+}
+
 /* Formulario */
 .formulario label {
   display: block;
